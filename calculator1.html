@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cal{
+            min-height: 600px;
+            width: 400px;
+            background: rgb(7, 0, 0);
+            border: 5px groove black;
+            margin: 0px auto;
+            box-shadow: 0px 0px 30px black;
+            border-radius: 10px;
+        }
+        .a{
+            height: 60px;
+            width: 340px;
+            background: whitesmoke;
+            border-radius: 10px;
+            border: 5px solid black;
+            margin-top: 10px;
+            margin-left: 25px;
+            font-size: 35px;
+            text-align: right;
+            padding-top: 10px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .a1{
+            height: 60px;
+            width: 60px;
+            margin: 5px;
+            margin-top: 30px;
+            margin-left: 20px;
+            border-radius: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-sizing: border-box;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div id="cal">
+        <div class="a" >0</div>
+        <button class="a1">AC</button>
+        <button class="a1">DEL</button>
+        <button class="a1">DIV</button>
+        <button class="a1">=</button>
+        <button class="a1">7</button>
+        <button class="a1">8</button>
+        <button class="a1">9</button>
+        <button class="a1">X</button>
+        <button class="a1">4</button>
+        <button class="a1">5</button>
+        <button class="a1">6</button>
+        <button class="a1">-</button>
+        <button class="a1">1</button>
+        <button class="a1">2</button>
+        <button class="a1">3</button>
+        <button class="a1">+</button>
+        <button class="a1">%</button>
+        <button class="a1">0</button>
+        <button class="a1">.</button>
+        <button class="a1">m-</button>
+        
+    </div>
+    <script>
+let display = document.querySelector(".a");
+let buttons = document.querySelectorAll(".a1");
+
+let expression = "";
+
+buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+
+        let value = this.innerHTML;
+
+        switch (value) {
+
+            case "AC":
+                expression = "";
+                display.innerHTML = "0";
+                break;
+
+            case "DEL":
+                expression = expression.slice(0, -1);
+                display.innerHTML = expression || "0";
+                break;
+
+            case "=":
+                try {
+                    let exp = expression
+                        .replace(/X/g, "*")
+                        .replace(/DIV/g, "/");
+
+                    expression = eval(exp).toString();
+                    display.innerHTML = expression;
+                } catch {
+                    display.innerHTML = "Error";
+                    expression = "";
+                }
+                break;
+
+            case "m-":
+    
+                break;
+
+            default:
+                expression += value;
+                display.innerHTML = expression;
+        }
+
+    });
+});
+</script>
+</body>
+</html>
