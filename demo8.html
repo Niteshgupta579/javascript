@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body>
+ <p id="p"></p>
+<input type="text" id="t1">
+<button id="btn" onclick="demo()">Validate Password</button>
+
+<script>
+function demo() {
+    var p= document.getElementById("p")
+    var x = document.getElementById("t1");
+    var len = x.value.length;
+    var b = document.getElementById("btn");
+
+    if (len == 6) {
+        x.style.border = "2px solid green";
+        x.style.color = "green";
+        b.style.background = "green";
+      //  alert("Valid Password");
+        p.innerText="valid password"
+        p.style.color="green"
+    } else {
+        x.style.border = "2px solid red";
+        x.style.color = "red";
+        b.style.background = "red";
+      //  alert("Invalid Password");
+      p.style.color="red"
+        p.innerText="invaild pincode"
+    }
+}
+</script>
+
+</body>
+</html>

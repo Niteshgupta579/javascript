@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            line-height: 100px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">
+        Techphile
+    </h1>
+    <button onclick="demo()"> Click Me!</button>
+    <script>
+        function demo(){
+           var x = confirm("Are you Sure");
+            var y = document.getElementById("h1")
+            if(x==true){
+                y.style.background="red"
+                y.style.color="white"
+                y.style.transform= "rotate(300deg)"
+                document.write("welcome to techphile")
+            }            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img    src="images/pexels-d-h-j-32884887-16916417.jpg" width="300px" height="400px" alt="abc " id="im1">
+    <img   src="images/pexels-liuguangxi-12033766.jpg" width="300px" height="400px" alt="abcde" id="im2">
+ <button onclick="myfunc()">click me</button>
+ <script>
+    function myfunc(){
+      var img1 =document.getElementById("im1")
+      var  img2= document.getElementById("im2")
+      var  path1 = img1.src
+      var path2 = img2.src
+      img1.src= path2
+      img2.src=path1
+    }
+    setInterval("myfunc()",500)
+ </script>
+</body>
+</html>

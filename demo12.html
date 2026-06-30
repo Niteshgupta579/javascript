@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            min-height: 200px;
+            width: 300px;
+            padding: 35px;
+            box-sizing: border-box;
+            background: whitesmoke;
+            border-radius: 2px solid black;
+            box-shadow: 0px 0px 30px black;
+            margin: 0px auto;
+
+        }
+        input{
+            width: 100%;
+            background: white;
+            border: none;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 0px  0px 10px black inset;
+            padding-left: 10px;
+        }
+        button{
+            background: red;
+            height: 50px;
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <input type="text" id="name" placeholder="Name"/> <br>
+        <p id="msg1"></p>
+        <input type="moblie" id="mobile" placeholder="Mobile Number"> <br>
+        <p id="msg2"> </p>
+        <input type="date" id="Date">
+        <p id="msg3"></p>
+        <button onclick="myfunc()"> Print data</button>
+        <script>
+            function myfunc(){
+                var d1 = document.getElementById("name")
+                var d2= document.getElementById("mobile")
+                var d3= document.getElementById("Date")
+                var d4= document.getElementById("msg1")
+                var d5 =document.getElementById("msg2")
+                var d6= document.getElementById("msg3")
+               // d4.innerText = d1.value
+                d4.innerHTML = `<b> NAME:</b> ${d1.value}`
+                d5.innerText =  `<b> MOBILE: </b>${d2.value}`
+                d6.innerText =  `<b> DATE:</b> ${d3.value}`
+            }
+        </script>
+
+    </div>
+</body>
+</html>

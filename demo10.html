@@ -1,0 +1,44 @@
+<html>
+    <head> <style>
+        #dv1,#dv2{
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+            background: whitesmoke;
+        float: left;
+         margin-left: 20px;
+        }
+        .btn{
+            background: red;
+            margin-left: 20px;
+            margin-top: 50px;
+            height: 40px;
+            width: 100px;
+            border-radius: 10px;
+        }
+        
+    </style></head>
+    <body>
+     <div id="dv1">
+        <p> This is pragraph</p>
+        <b> this is B Tag</b>
+        <p>Techpile Technology</p>
+        <u> this is good </u> <br>
+     </div>   
+     <br>
+     <div id="dv2"></div>
+     <button class="btn" onclick="myfun()">click Me</button>
+     <script>
+        function myfun(){
+          var d1 =document.getElementById("dv1")
+              var data = d1.innerHTML
+          var d2 =document.getElementById("dv2")
+          alert(d2.innerText="this is good way to provides the use of the path") 
+          var temp = data
+            data=d2
+            d2 =temp 
+
+        }
+     </script> 
+    </body>
+    </html>

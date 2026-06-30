@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+        #t1{
+            height: 40px;
+            width: 400px;
+            
+        }
+        button{
+            height: 40px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="password" id="t1">
+    <button onclick="demo()" id="t2">SHOW</button>
+
+    <script>
+        function demo() {
+            var i = document.getElementById("t1");
+            var i2 = document.getElementById("t2");
+
+            if (i.type == "password") {
+                i.type = "text";
+                i2.innerHTML = "HIDE";
+                i2.style.background="red"
+                t1.style.Color="yellowgreen"
+
+            } else {
+                i.type = "password";
+                i2.innerHTML = "SHOW";
+                i2.style.background="green"
+            }
+        }
+    </script>
+
+</body>
+</html>

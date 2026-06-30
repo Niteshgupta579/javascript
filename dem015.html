@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            #t1{
+                height: 200px;
+                width: 200px;
+                
+                
+        
+
+            }
+            #btn{
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                border: groove green;
+                
+        
+            
+            }
+        </style>
+    </head>
+    <body>
+      <center>  <img src="images/Screenshot 2026-06-29 110704.png"  id="t1" alt="">
+         <br>
+         <input type="button" id="btn" onclick="demo()" value="ON" height="200px">
+         </center>
+         <script>
+            function demo(){
+                var im =document.getElementById("t1")
+                var  b =document.getElementById("btn")
+                if(b.value=="ON"){
+                   b.value ="OFF"
+                 im.src="images/Screenshot 2026-06-29 110704.png" 
+                   b.style.background="yellowgreen"
+                }
+                else{
+                    b.value="ON"
+                    im.src ="images/Screenshot 2026-06-29 110722.png"
+                    b.style.background ="red"
+                }
+            }
+            setInterval("demo()",1000)
+         </script>
+    </body>
+</html>

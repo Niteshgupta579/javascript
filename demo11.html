@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            h1,h2{
+                background: red;
+                text-align: center;
+                height: 50px;
+                width: 1000px;
+                border-radius: 5px soild red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="x">Techphile Technology</h1>
+        <h2 id ="y">Code helpher</h2>
+        <button onmouseleave="myfunc()">Swap text</button>
+        <script>
+            function myfunc(){
+                var  h1 = document.getElementById("x")
+                var h2= document.getElementById("y")
+                var text1 =h1.innerText
+                var text2 =h2.innerText
+                h1.innerText =text2 
+                h2.innerText=text1
+
+            }
+            window.setInterval("myfunc()",2000)
+        </script>
+    </body>
+</html>
