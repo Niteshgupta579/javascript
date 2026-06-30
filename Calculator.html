@@ -47,29 +47,29 @@
                 var d2 =document.querySelector("#t2");
                 var d3 =parseFloat(d1.value)
                 var d4 = parseFloat(d2.value)
-                var add = (d3+d4).toFixed 
+                var add = (d3+d4)
 
                 var msg =document.querySelector("#msg")
-                  msg.innerHTML = `<b>Total Number:${add}</b>` 
+                  msg.innerHTML = `<b>Total Number:${add.toFixed(3)}</b>` 
             }
              function sub(){
                 var d1 = document.querySelector("#t1");
                 var d2 =document.querySelector("#t2");
                 var d3 =parseFloat(d1.value)
                 var d4 = parseFloat(d2.value)
-                var sub = (d3-d4).toFixed  
+                var sub = (d3-d4) 
                 var msg =document.querySelector("#msg")
-                  msg.innerHTML = `<b>Total Number:${sub}</b>`  
+                  msg.innerHTML = `<b>Total Number:${sub.toString(3)}</b>`  
             }
             function mul(){
                  var d1 = document.querySelector("#t1");
                 var d2 =document.querySelector("#t2");
                 var d3 =parseFloat(d1.value)
                 var d4 = parseFloat(d2.value)
-                var mul = (d3*d4).toFixed 
+                var mul = (d3*d4) 
                 
 var msg =document.querySelector("#msg")
-                  msg.innerHTML = `<b>Total Number:${mul}</b>`  
+                  msg.innerHTML = `<b>Total Number:${mul.toFixed(3)}</b>`  
 
             }
              function div(){
@@ -77,9 +77,9 @@ var msg =document.querySelector("#msg")
                 var d2 =document.querySelector("#t2");
                 var d3 =parseFloat(d1.value)
                 var d4 = parseFloat(d2.value)
-                var div = (d3/d4).toFixed 
+                var div = (d3/d4) 
                  var msg =document.querySelector("#msg")
-                  msg.innerHTML = `<b>Total Number:${div}</b>`  
+                  msg.innerHTML = `<b>Total Number:${div.toFixed(3)}</b>`  
 
             }
         </Script>
