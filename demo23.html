@@ -1,0 +1,45 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+       
+     <select onchange="demo()">
+        <option> html </option>
+        <option> Css </option>
+        <option> java </option>
+        <option> js </option>
+          <option> php </option>
+        </select>
+        <button onclick="demo()"> Submit </button>
+        <input type="number">
+
+ <script>
+    function demo() {
+    var ddl = document.querySelector("select");
+    var i = document.querySelector("input");
+
+    var v = ddl.value;
+
+    if (v == "html") {
+        i.value = 1000;
+    }
+    else if (v == "css") {
+        i.value = 2000;
+    }
+    else if (v == "java") {
+        i.value = 3000;
+    }
+    else if (v == "js") {
+        i.value = 4000;
+    }
+    else if (v == "php") {
+        i.value = 5000;
+    }
+}
+   
+    
+ </script>
+       
+    </body>
+</html>
